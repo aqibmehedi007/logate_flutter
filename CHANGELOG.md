@@ -10,3 +10,8 @@
 - Updated README file to provide better documentation.
 - Fixed some minor typos in the documentation.
 - Added more details about package usage and example code.
+
+## [0.0.3] - 2024-11-14
+- Added demo images to README to illustrate example usage.
+- Improved README with clearer instructions for integration and usage.
+- Enhanced documentation for improved user experience.

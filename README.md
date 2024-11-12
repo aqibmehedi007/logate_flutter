@@ -3,6 +3,10 @@
 
 `loqate_flutter` is a simple Flutter package that integrates with the Loqate API to provide address suggestion and detailed address retrieval services. It is designed to allow easy address lookup and retrieval for applications that need accurate address data in any country, including street names, suburb, city, state, and postal code.
 
+## 📺 Demo
+
+![Example App Demo](https://aqibmehedi.net/flutter_library_assets/logate_flutter.gif)
+
 ## Features
 
 - **Search Address**: Search for address suggestions based on a given query.
@@ -162,12 +166,13 @@ If you would like to contribute to this project, feel free to fork the repositor
 
 ---
 
-### Contact
+## 👤 Author
 
-For any questions or issues, feel free to open an issue on [GitHub](https://github.com/yourgithub/loqate_flutter).
+**Aqib Mehedi - Crafting Tomorrow's Innovations 🚀**
 
----
+Versatile Full-stack Mobile Developer | Robotics Enthusiast | Data Science & AI Explorer
 
-### Disclaimer
+Hi! I'm Aqib Mehedi, a passionate and skilled developer with a wide array of expertise, ranging from mobile app development to robotics and AI. I thrive on solving complex problems and turning innovative ideas into reality. Whether it's developing cross-platform apps, designing sleek UX/UI, or pushing the boundaries of robotics, I’m always up for a challenge!
 
-This package is not directly affiliated with Loqate. It is a third-party integration for the Loqate API in Flutter applications.
+- 📫 GitHub: [aqibmehedi007](https://github.com/aqibmehedi007)
+- 🌐 Portfolio: [aqibmehedi.net](https://www.aqibmehedi.net)
