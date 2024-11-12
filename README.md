@@ -1,17 +1,14 @@
-# loqate_flutter
-loqate_flutter is a Flutter package that integrates with the Loqate API for address suggestion and retrieval, providing accurate Australian address details like street, suburb, city, and postal code. It offers easy integration with just an API key and simple methods for address search and detail retrieval.
-
-
 
 # loqate_flutter
 
-`loqate_flutter` is a simple Flutter package that integrates with the Loqate API to provide address suggestion and detailed address retrieval services. It is designed to allow easy address lookup and retrieval for applications that need accurate address data in Australia.
+`loqate_flutter` is a simple Flutter package that integrates with the Loqate API to provide address suggestion and detailed address retrieval services. It is designed to allow easy address lookup and retrieval for applications that need accurate address data in any country, including street names, suburb, city, state, and postal code.
 
 ## Features
 
 - **Search Address**: Search for address suggestions based on a given query.
-- **Get Address Details**: Retrieve detailed information for a selected address, including street, suburb, city, state, and postal code.
+- **Get Address Details**: Retrieve detailed information for a selected address, including street name, suburb, city, state, and postal code.
 - **Flexible Integration**: Easily integrate this package by providing an API key.
+- **Support for Multiple Countries**: Allows you to specify a country code (e.g., AU for Australia, US for United States) for address searches.
 
 ## Installation
 
@@ -25,7 +22,7 @@ dependencies:
     sdk: flutter
   loqate_flutter:
     git:
-      url: https://github.com/yourgithub/loqate_flutter.git
+      url: https://github.com/aqibmehedi007/logate_flutter.git
       ref: main # or the branch you want to use
 ```
 
@@ -48,17 +45,17 @@ import 'package:loqate_flutter/loqate_service.dart';
 
 void main() {
   // Initialize with your Loqate API Key
-  LoqateService loqateService = LoqateService('YOUR_API_KEY');
+  LoqateService loqateService = LoqateService(apiKey: 'YOUR_API_KEY');
 }
 ```
 
 ### Search for Address Suggestions
 
-Use the `searchAddress` method to get address suggestions based on a search query.
+Use the `searchAddress` method to get address suggestions based on a search query and country code.
 
 ```dart
-Future<void> searchAddress(String query) async {
-  List<Map<String, String>> suggestions = await loqateService.searchAddress(query);
+Future<void> searchAddress(String query, String countryCode) async {
+  List<Map<String, String>> suggestions = await loqateService.searchAddress(query, countryCode);
 
   suggestions.forEach((suggestion) {
     print('Address: ${suggestion['Text']}');
@@ -114,7 +111,7 @@ class AddressSearch extends StatefulWidget {
 }
 
 class _AddressSearchState extends State<AddressSearch> {
-  final LoqateService loqateService = LoqateService('YOUR_API_KEY');
+  final LoqateService loqateService = LoqateService(apiKey: 'YOUR_API_KEY');
   List<String> suggestions = [];
 
   @override
@@ -123,7 +120,7 @@ class _AddressSearchState extends State<AddressSearch> {
       children: [
         TextField(
           onChanged: (query) {
-            loqateService.searchAddress(query).then((results) {
+            loqateService.searchAddress(query, 'AU').then((results) {
               setState(() {
                 suggestions = results.map((e) => e['Text']).toList();
               });

@@ -24,7 +24,7 @@ class _AddressSearchScreenState extends State<AddressSearchScreen> {
 
   void _searchAddress(String query) async {
     if (query.isNotEmpty) {
-      final results = await widget.loqateService.searchAddress(query);
+      final results = await widget.loqateService.searchAddress(query,"AU");
       setState(() {
         _suggestions = results;
       });

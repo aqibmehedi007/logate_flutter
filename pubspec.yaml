@@ -1,6 +1,6 @@
 name: loqate_flutter
 description: A Flutter library to interact with the Loqate API for address lookup and details retrieval.
-version: 0.0.1
+version: 0.0.2+1
 environment:
   sdk: ">=2.18.0 <4.0.0"
 
