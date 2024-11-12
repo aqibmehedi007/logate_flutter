@@ -18,7 +18,6 @@ class _AddressSearchScreenState extends State<AddressSearchScreen> {
   TextEditingController _unitOrFlatNoController = TextEditingController();
   TextEditingController _streetNumberController = TextEditingController();
   TextEditingController _streetNameController = TextEditingController();
-  TextEditingController _suburbController = TextEditingController();
   TextEditingController _cityController = TextEditingController();
   TextEditingController _stateController = TextEditingController();
   TextEditingController _postalCodeController = TextEditingController();

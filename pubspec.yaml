@@ -3,7 +3,16 @@ description: A Flutter library to interact with the Loqate API for address looku
 version: 0.0.1
 environment:
   sdk: ">=2.18.0 <4.0.0"
+
 dependencies:
   flutter:
     sdk: flutter
   http: ^1.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+# Homepage or repository for your package
+homepage: https://github.com/aqibmehedi007/logate_flutter
